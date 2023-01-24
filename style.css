@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --primary-color: #0072fa;
+  --secundary-color: #3475dd;
+  --neutral-color: #f6f6f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--neutral-color);
+}
+a {
+  line-height: 2px;
+}
+.container {
+  max-width: 1440px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.notification-top {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  padding: 0 30px;
+}
+
+.left {
+  display: inline-block;
+  position: relative;
+}
+
+.chek {
+  position: absolute;
+  top: -3px;
+  left: -30px;
+  color: var(--secundary-color);
+}
+
+.left a {
+  color: var(--secundary-color);
+  text-decoration: none;
+}
+
+.notificatio-content {
+  max-width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid var(--neutral-color);
+}
+
+.message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+svg.info {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.message-text {
+  width: 70%;
+  text-align: left;
+}
+.message-text p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.message-text span {
+  position: relative;
+  top: -7px;
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+}
+.message-img img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+svg.mail {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.message::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: relative;
+  top: -20px;
+  left: -15px;
+}
+
+.notification-bottom {
+  max-width: 100%;
+  padding: 10px 30px;
+}
+.notification-bottom a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secundary-color);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+.message::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.message:active::after {
+  opacity: 0.3;
+}
+
+.message p:active {
+  color: var(--secundary-color);
+}
